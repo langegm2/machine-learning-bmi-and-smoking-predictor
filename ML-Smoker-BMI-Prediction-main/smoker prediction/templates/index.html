@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoker Prediction</title>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+
+<body>
+    
+    <h1>Are You A Smoker?</h1>
+    
+    <nav>
+        <ul>
+          <li><a href="http://127.0.0.1:5000/data_overview">Data Overview</a></li>
+        </ul>
+      </nav>
+
+        <div class="container">
+            <img src="{{ url_for('static', filename='images/smoker.jpeg') }}" alt="Image">
+
+            <form action="/predict" method="POST" class="form">
+                <div class="fieldset">
+                    <label>Enter Your Age</label>
+                    <input class="age" name="age" required>
+                    <br>
+                    <label>Enter Your BMI</label>
+                    <input class="bmi" name="bmi" required>
+                    <br>
+                    <label>Enter Your Yearly Hospital Charges</label>
+                    <input class="charges" name="charges" required>
+                    <br>
+                    <label>Enter Your Sex (0: Male 1: Female)</label>
+                    <input class="sex_updated" name="sex_updated" required>
+                </div>
+                <br>
+                <input type="submit" class="button" value="Predict">
+            </form>
+            </form>
+        </div>
+    </body>
+    
+</html>

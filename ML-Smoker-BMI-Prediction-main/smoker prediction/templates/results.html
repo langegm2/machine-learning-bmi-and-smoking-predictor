@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoker Prediction</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+
+<body>
+    <h1>The Prediction</h1>
+    <main>
+            <h3>Here Are Your Results:</h3>
+                <ul>
+                <li>Age: {{ age|int }}</li>
+                <li>BMI: {{ bmi|int }}</li>
+                <li>Hospital Charges: ${{ charges|int }}</li>
+                </ul>
+            <h3>{{ output }}</h3>
+        </section>
+    
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5000/">Try Again</a></li>
+            </ul>
+        </nav>
+    </main>
+
+</body>
+</html>
